@@ -3,12 +3,9 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
   CardTitle } from 'reactstrap';
 
 
-class RoomDetail extends Component {
-    constructor(props) {
-        super(props);             
-    }
+ 
 
-renderRoom(room) {
+  function renderRoom({room}) {
     if (room != null)
     return (
       <div className='col-12 col-md-5 m-1'>
@@ -27,7 +24,7 @@ renderRoom(room) {
             <div></div>
         );
 }
-renderComments(comments) {
+ function renderComments({comments}) {
     if(comments == null){
         return(<div></div>);
     }
@@ -54,13 +51,10 @@ renderComments(comments) {
                 </ul>
             </div>
         ); 
-  
-
-  
 }
 
-render() {
-    
+
+const  RoomDetail = (props) => {   
     const room = this.props.room;
     if(room == null){
         return(<div></div>)
@@ -79,7 +73,7 @@ render() {
     );
 }
 
-}
+
 
 
 export default RoomDetail;
