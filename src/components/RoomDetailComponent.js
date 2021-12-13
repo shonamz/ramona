@@ -45,7 +45,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
         })
          return (
             <div className='col-12 col-md-5 m-1'>
-                <h4> Comment s </h4>
+                <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {commentsList}
                 </ul>
