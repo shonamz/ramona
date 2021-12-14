@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
-import RoomDetail from './RoomDetailComponent';
-import { ROOMS } from '../shared/rooms';
+import DishDetail from './DishDetailComponent';
+import { DISHES } from '../shared/dishes';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -15,13 +15,13 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        rooms: ROOMS,
-        selectedRoom: null
+        dishes: DISHES,
+        selectedDish: null
     };
   }
 
-  onRoomSelect(roomId) {
-    this.setState({ selectedRoom: roomId});
+  onDishSelect(dishId) {
+    this.setState({ selectedDish: dishId});
   }
   
 
@@ -36,15 +36,15 @@ class Main extends Component {
       <div>
          
         <Header />
-         {/* <Menu rooms={this.state.rooms} onClick={(roomId) => this.onRoomSelect(roomId)} />
-        <RoomDetail room={this.state.rooms.filter((room) => room.id === this.state.selectedRoom)[0]} />  */}
+         {/* <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
+        <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />  */}
         
         <Switch>
               <Route path='/home' component={HomePage} />
-              <Route exact path='/menu' component={() => <Menu rooms={this.state.rooms} />} />
-              <Redirect to="/home" />
+              <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Route exact path='/contactus' component={Contact} />
-          </Switch>
+              <Redirect to="/home" />
+           </Switch>
           <Footer />
       </div>
     );

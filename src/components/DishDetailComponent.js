@@ -3,15 +3,15 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
   CardTitle } from 'reactstrap';
 
 
-  function RenderRoom({room}) {
-    if (room != null)
+  function RenderDish({dish}) {
+    if (dish != null)
     return (
       <div className='col-12 col-md-5 m-1'>
       <Card>
-          <CardImg width='100%' src={room.image} alt={room.name} />                    
+          <CardImg width='100%' src={ dish.image} alt={dish.name} />                    
           <CardBody>
-              <CardTitle>{room.name}</CardTitle>
-              <CardText>{room.description}</CardText>
+              <CardTitle>{dish.name}</CardTitle>
+              <CardText>{dish.description}</CardText>
           </CardBody>
       </Card>
         </div>
@@ -52,19 +52,19 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
 }
 
 
-const RoomDetail = (props) => {   
-    const room = props.room;
-    if(room == null){
+const DishDetail = (props) => {   
+    const dish = props.dish;
+    if(dish == null){
         return(<div></div>)
     }
-    const roomItem =<RenderRoom room={props.room}/>
-    const commentItem =< RenderComments comments={props.room.comments}/>
+    const dishItem =<RenderDish dish={props.dish}/>
+    const commentItem =< RenderComments comments={props.dish.comments}/>
     
 
     return(
         <div class='container'> 
         <div className='row'>
-            {roomItem}
+            {dishItem}
             {commentItem}
         </div>
         </div>
@@ -74,4 +74,4 @@ const RoomDetail = (props) => {
 
 
 
-export default RoomDetail;
+export default DishDetail;
