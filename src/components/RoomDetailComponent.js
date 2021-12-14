@@ -3,9 +3,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
   CardTitle } from 'reactstrap';
 
 
- 
-
-  function renderRoom({room}) {
+  function RenderRoom({room}) {
     if (room != null)
     return (
       <div className='col-12 col-md-5 m-1'>
@@ -24,7 +22,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
             <div></div>
         );
 }
- function renderComments({comments}) {
+ function RenderComments({comments}) {
     if(comments == null){
         return(<div></div>);
     }
@@ -54,13 +52,13 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
 }
 
 
-const  RoomDetail = (props) => {   
-    const room = this.props.room;
+const RoomDetail = (props) => {   
+    const room = props.room;
     if(room == null){
         return(<div></div>)
     }
-    const roomItem = this.renderRoom(room)
-    const commentItem = this.renderComments(room.comments)
+    const roomItem =<RenderRoom room={props.room}/>
+    const commentItem =< RenderComments comments={props.room.comments}/>
     
 
     return(
