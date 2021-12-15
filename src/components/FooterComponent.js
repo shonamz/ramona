@@ -20,7 +20,7 @@ function Footer(props) {
                     <h5>Our Address</h5>
                     <address>
                     11345 Beverly Blv, Beverly Hills<br />
-		              USA<br />
+		              California,USA<br />
 		              <i className="fa fa-phone fa-lg"></i>: +310 134 5678<br />
 		              <i className="fa fa-fax fa-lg"></i>: +310 8765 4321<br />
 		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:ramona@food.net">

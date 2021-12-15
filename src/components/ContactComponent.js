@@ -11,7 +11,7 @@ function Contact(props) {
                         <h5>Our Address</h5>
                         <address>
                         11345 Beverly Blv, Beverly Hills<br />
-                        USA<br />
+                        California,USA<br />
                         <i className="fa fa-phone"></i>: +310 234 5678<br />
                         <i className="fa fa-fax"></i>: +310 765 4321<br />
                         <i className="fa fa-envelope"></i>: <a href="mailto:ramona@food.net">ramona@food.net</a>

@@ -8,7 +8,7 @@ export const DISHES =
         label:'Hot',
         price:'4.99',
         featured: true,
-        description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                    
+        description:'This baked mac and cheese is a family favorite recipe, loved by both children and adults. It uses a combination of cheeses, layered in the dish as well as melted into a rich and creamy cheese sauce! '                    
         },
         {
         id: 1,
@@ -22,8 +22,8 @@ export const DISHES =
         },
         {
         id: 2,
-        name:'Garlic Bread',
-        image: '/assets/images/garlic.jpg',
+        name:'Ravioli',
+        image: '/assets/images/ravioli.jpg',
         category: 'appetizer',
         label:'New',
         price:'1.99',
