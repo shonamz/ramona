@@ -15,7 +15,7 @@ function About(props) {
                     <Media left middle>
                         <Media object src={leader.image} alt={leader.name} />
                     </Media>
-                    <Media body className="ml-5">
+                    <Media body className="ml-3">
                         <Media heading>{leader.name}</Media>
                         <p >{leader.designation}</p>
                         <p>{leader.description}</p>
@@ -90,10 +90,10 @@ function About(props) {
                 <div className="col-12">
                     <h2>Corporate Leadership</h2>
                 </div>
-                <div className="col-12">
+                <div className="col-12 ">
                     <Media list>
                         {leaders}
-                    </Media>
+                     </Media>
                 </div>
             </div>
         </div>

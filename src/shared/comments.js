@@ -2,7 +2,7 @@ export const COMMENTS =
 [
     {
         id: 0,
-        roomId: 0,
+        dishId: 0,
         rating: 5,
         comment: "Imagine all the eatables, living in conFusion!",
         author: "John Lemon",
