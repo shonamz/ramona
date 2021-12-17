@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
   function RenderDish({dish}) {
     if (dish != null)
     return (
-      <div className='col-12 col-md-5 m-1'>
+      <div >
       <Card>
           <CardImg  src={ dish.image} alt={dish.name} />                    
           <CardBody>
