@@ -43,6 +43,8 @@ class Contact extends Component {
         alert('Current State is: ' + JSON.stringify(values));
         this.props.resetFeedbackForm();
         // event.preventDefault();
+        this.props.postFeedback(values);
+
     }
     render(){
      return(

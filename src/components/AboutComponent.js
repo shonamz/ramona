@@ -1,10 +1,12 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { LEADERS } from '../shared/leaders';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
+  
 
  
-  
 function About(props) {
 
  
@@ -13,7 +15,7 @@ function About(props) {
             <div key={leader.id} className="col-12 ">
                 <Media tag="li">
                     <Media left middle>
-                        <Media object src={leader.image} alt={leader.name} />
+                        <Media object src={baseUrl+leader.image} alt={leader.name} /> 
                     </Media>
                     <Media body className="ml-3">
                         <Media heading>{leader.name}</Media>
@@ -25,16 +27,36 @@ function About(props) {
         );
     }
 
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
             <div key={leader.id} className="col-12">
                 <Media list>
+                <Stagger in>
                     <RenderLeader leader={leader} />
+                </Stagger>   
                  </Media>
             </div>
            
         );
     });
+    function RenderLeaders() {
+
+        if (props.leaders.isLoading) {
+            return <Loading />;
+        }
+        else if (props.leaders.errMess) {
+            return (
+                <h4>{props.leaders.errMess}</h4>
+            );
+        }
+        else return (
+            <Media list>
+                <Stagger in>
+                    {leaders}
+                </Stagger>
+            </Media>
+        );
+    }
 
     return(
         <div className="container">
@@ -93,6 +115,7 @@ function About(props) {
                 <div className="col-12 ">
                     <Media list>
                         {leaders}
+                        {/* <RenderLeaders /> */}
                      </Media>
                 </div>
             </div>
