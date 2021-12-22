@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
  
- import DishDetail from    "./DishDetailComponent"
  import { Card, CardImg, CardImgOverlay,
     CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
